@@ -123,9 +123,9 @@ const deals = [
     to replace the 15 with a 10.
 */
 
+deals[0].title = deals[0].title.replace('15','10')
 
-
-console.log(deals)
+console.log(deals[0]['title'])
 
 /*
     The restaurant is going to continue its

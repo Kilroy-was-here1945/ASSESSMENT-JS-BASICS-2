@@ -96,45 +96,45 @@ console.log(pizza[3])
     data in some functions that you'll write.
 */
 
-[{}
-let meatball = [
-    {name: 'meatball'},
-    {price: 100001},
-    {catagory: 'food'},
-    {popularity: 10},
-    {rating: 8},
-    {tags: ['meatball','$100001','food','10','8']}
-]
+arr= [{
 
-let hamburger = [
-    {name: 'hamburger'},
-    {price: 100002},
-    {catagory: 'food'},
-    {popularity: 11},
-    {rating: 7},
-    {tags: ['hamburger','$100002','food','11','7']}
-]
+    name: 'meatball',
+    price: 100001,
+    catagory: 'food',
+    popularity: 10,
+    rating: 8,
+    tags: ['meatball','$100001','food','10','8']
+}
+,
+{
+    name: 'hamburger',
+    price: 100002,
+    catagory: 'food',
+    popularity: 11,
+    rating: 7,
+    tags: ['hamburger','$100002','food','11','7']
+}
+,
+{
 
-let apple = [
-    {name: 'apple'},
-    {price: 100003},
-    {catagory: 'food'},
-    {popularity: 12},
-    {rating: 6},
-    {tags: ['apple','$100003','food','12','6']}
-]
+    name: 'apple',
+    price: 100003,
+    catagory: 'food',
+    popularity: 12,
+    rating: 6,
+    tags: ['apple','$100003','food','12','6']
+}
+,{
 
-let pickle = [
-    {name: 'pizza'},
-    {price: 100004},
-    {catagory: 'food'},
-    {popularity: 13},
-    {rating: 5},
-    {tags: ['pickle','$100004','food','13','5']}
-]
+    name: 'pizza',
+    price: 100004,
+    catagory: 'food',
+    popularity: 13,
+    rating: 5,
+    tags: ['pickle','$100004','food','13','5']
+}]
 
 
-let arr = [meatball, hamburger, apple, pickle, pizza]
 
 
 
@@ -154,8 +154,13 @@ let arr = [meatball, hamburger, apple, pickle, pizza]
 */
 
 //CODE HERE
-console.log(pickle[0])
+// const filterFood = arr.filter((item) => {
+//     return item.tags.includes(filterTag)
+// })
+// console.log(filterFood)
 
+const filteredFood = arr.filter((item) => item.tags[0] === 'kids');
+console.log(filteredFood);
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
@@ -202,6 +207,18 @@ console.log(pickle[0])
 
 //CODE HERE
 
+const filterByProperty = (property, number, type) => {
+    const filtered = arr.filter((element) => {
+        if(type === 'above'){
+            if(element[property] > number){
+
+            }
+        }
+
+  
+  })
+  return filtered
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -211,3 +228,4 @@ console.log(pickle[0])
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity', 4, 'below'))

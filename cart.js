@@ -34,7 +34,7 @@ const cart = [
 ]
 
 //code here
-
+const summPrice = cart.reduce((acc, curr) => acc + curr,0)
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -55,8 +55,14 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let finalPrice = cartTotal + (cartTotal * tax) - couponValue
+    console.log(cartTotal * tax)
 
+    return finalPrice
+}
 
+console.log(calcFinalPrice(15,3, .05))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -80,7 +86,7 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+I would make a object simular to array above that has a list of different properties that can be extracted in a simular way to the way that price was extracted from the problem above. I would use the costomers payment amount, the costomers name, email so you can sell their data, and address we can send them lots of adds.
 */
 
 /*
@@ -89,3 +95,23 @@ const cart = [
 */
 
 //CODE HERE
+const costomerData = [
+    {
+        name: 'pizza', 
+        price: 9.99,
+        address: '109302 s that one street',
+        email: 'thename.gmail'
+    }, 
+    {
+        name: 'pasta', 
+        price: 8.99,
+        address: '109302 s that one street',
+        email: 'email@gmail.com', 
+    }, 
+    {
+        name: 'salad', 
+        price: 7.99,
+        address: '109302 s that one street',
+        email: 'anemail@gmail.com', 
+    }
+]

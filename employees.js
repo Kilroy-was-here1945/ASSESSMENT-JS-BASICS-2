@@ -128,7 +128,7 @@ let manager = new Manager ('Winson', 'weekdays mornings', 'Cece and Schmidt')
     `manager` object.  
 */
 
-// code here                                                                                           ??????????
+// code here
 
 /*
     Call the `addEmployee` method on the 
@@ -136,7 +136,8 @@ let manager = new Manager ('Winson', 'weekdays mornings', 'Cece and Schmidt')
     'Coach' or whatever name you'd like.
 */
 
-console.log(manager(manager))
+console.log('===================================');
+manager.getEmployees();
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
